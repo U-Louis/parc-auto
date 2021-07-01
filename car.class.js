@@ -129,6 +129,7 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuelCapac
      * @param {Number} anyGasQuantity 
      */
     this.fillGas = function(anyGasQuantity) {
+
         if (!anyGasQuantity) {
             throw new Error("Entrer une quantité d'essence.")
         }
@@ -138,11 +139,11 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuelCapac
         if (anyGasQuantity <= 0) {
             throw new Error("La quantité doit être supérieur à 0.")
         }
-        if (anyGasQuantity >= gasQuantity) {
+        if (anyGasQuantity >= fuelLevel) {
             throw new Error("La quantité indiquée est trop importante pour la capacité du réservoir.")
         }
-        console.log("Ajout de " + anyGasQuantity + "L d'essence.\n" + this.name + ", votre voiture, dispose désormais de " + gasQuantity + "L d'essence.");
-        gasQuantity = anyGasQuantity;
+        console.log("Ajout de " + anyGasQuantity + "L d'essence.\n" + this.name + ", votre voiture, dispose désormais de " + fuelLevel + "L d'essence.");
+        fuelLevel = anyGasQuantity;
 
     }
 
@@ -174,6 +175,7 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuelCapac
             "weight : " + weight + "\n" +
             "power : " + power + "\n" +
             "fuelCapacity : " + fuelCapacity + "\n" +
+            "fuelLvl : " + fuelLevel + "\n" +
             "insured : " + insured + "\n" +
             "boardMsg : " + boardMsg + "\n";
 

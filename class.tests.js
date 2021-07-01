@@ -1,18 +1,20 @@
-function testAppelClass(){
-    var voiture1 = new Voiture("3636", "red", 1500, 50, 100, 4);
-    console.log(voiture1.toString());
-}
+// function testAppelClass() {
+//     var voiture1 = new Voiture("3636", "red", 1500, 50, 100, 4);
+//     console.log(voiture1.toString());
+// }
 
 //TESTS
 
 //scenario nominal
-var voiture1 = new Voiture(3636, "red", 1500, 50, 100, 5, 4);
+var voiture1 = new Voiture("3636", "red", 1500, 50, 100, 4);
+console.log(voiture1.toString());
 
-voiture1.toString();
-voiture1.fillGas(40);
-voiture1.move(25, "route");
-voiture1.fillGas(40);
-voiture1.move(10, "autoroute");
+
+// voiture1.toString();
+// voiture1.fillGas(40);
+// voiture1.move(25, "route");
+// voiture1.fillGas(40);
+// voiture1.move(10, "autoroute");
 
 
 //Donnees membres
@@ -62,4 +64,3 @@ for (let i = 0; i < jeuEssaiMove.length; i++) {
         console.error("input : " + jeuEssaiMove[i][0] + " + " + jeuEssaiMove[i][1] + " error : " + e);
     }
 }
-
