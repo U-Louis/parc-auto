@@ -212,4 +212,6 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuel, new
             "insured : " + insured + "\n" +
             "boardMsg : " + boardMsg + "\n";
 
-
+    }
+}
+}
