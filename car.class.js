@@ -9,6 +9,8 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
     var insured = false;
     var boardMsg = "Welcome aboard";
     
+    const COLORS = [blue, green, red, yellow, purple, white, black, brown];
+    
     
 
     //Getters and Setters
