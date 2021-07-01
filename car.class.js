@@ -1,37 +1,3 @@
-function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuel,newNbPlace){
-    var immatriculation;
-    var color
-    var weight;
-    var power;
-    var fuelCapacity ;
-    var nbPlace;
-    var insure;
-    var boardMsg;
-    
-
-    //Getters and Setters
-    var setImmatriculation=function(){};
-    var setWeight=function(){};
-    var setPower=function(){};
-    var setFuelCapacity=function(){};
-    var setNbPlace=function(){};
-    this.setInsure=function(){};
-    this.setBordMsg=function(){};
-
-    this.getImmatriculation=function(){};
-    this.getWeight=function(){};
-    this.getPower=function(){};
-    this.getFuelCapacity=function(){};
-    this.getNbPlace=function(){};
-    this.getInsure=function(){};
-    this.getBordMsg=function(){};
-    // Initialisation
-
-    // Action
-
-
-    //toString
-     
 //Methods
 function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuel, newNbPlace) {
     var immatriculation;
@@ -66,7 +32,7 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuel, new
     // Action
 
 
-  
+
     //Methods
 
     /**Méthode exposée : Repeindre la voiture La classe Voiture expose la méthode repeindre() qui admet en paramètre le libellé de la nouvelle couleur. Si cette nouvelle couleur est identique à la couleur courante, la méthode génère simplement un message remerciant pour ce rafraîchissement ; s'il s'agit d'une couleur différente, il la mémorise dans l'attribut correspondant et génère un autre message de remerciement. Cette méthode pourrait aussi bien retourner un code d'erreur, par exemple un booléen true si tout va bien ou false sinon.
@@ -119,5 +85,8 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuel, new
             "fuelCapacity : " + fuelCapacity + "\n" +
             "insured : " + insured + "\n" +
             "boardMsg : " + boardMsg + "\n";
-    }
 
+
+
+    }
+}
