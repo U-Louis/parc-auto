@@ -1,7 +1,7 @@
 //TESTS
 
 //scenario nominal
-var voiture1 = new Voiture(3636, red, 1500, 50, 100, 5, 4);
+var voiture1 = new Voiture(3636, "red", 1500, 50, 100, 5, 4);
 
 
 //Donnees membres
