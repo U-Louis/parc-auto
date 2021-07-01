@@ -1,3 +1,101 @@
+function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,newNbPlace){
+    var immatriculation;
+    var color;
+    var weight;
+    var power;
+    var fuelCapacity ;
+    var nbPlace;
+    var fuelLevel = 5 ;
+    var insured = false;
+    var boardMsg = "Welcome aboard";
+    
+    
+
+    //Getters and Setters
+
+    // setters
+    var setImmatriculation=function(newImmatriculation){
+        if (!newImmatriculation) throw new Error("immatricuation:champ obligatoire");
+        else if(newImmatriculation.length >= 4) immatriculation = newImmatriculation;
+        else throw new Error("immatricuation: Au moins 4 caractères");
+    };
+
+    var setColor=function(newColor){
+        if (!newImmatriculation) throw new Error("color:champ obligatoire");
+        else if(newImmatriculation.length >= 0) color = newColor;
+        else throw new Error("color: Au moins 1 caractères");
+    }
+
+    var setWeight=function(newWeight){
+        if(isNaN(newWeight) )throw new Error("weight: nombre attendu");
+        else if(newWeight <= 0) throw new Error("weight: nombre négatif");
+        else if(!newWeight) throw new Error("weight: Entrer un nombre");
+        else weight = newWeight;
+        
+    };
+    var setPower=function(newPower){
+        if (isNaN(newPower)) throw new Error("power:champ obligatoire");
+        else if(newPower <= 0) throw new Error("power: nombre négatif");
+        else if (!newPower) throw new Error("power: Veuillez entrer un nombre");
+        else power = newPower;
+    };
+
+    var setFuelCapacity=function(newFuelCapacity){
+        if(isNaN(newFuelCapacity) )throw new Error("fuel capacity: nombre attendu");
+        if(newFuelCapacity <= 0) throw new Error("fuel capacity: nombre négatif");
+        else if (!newFuelCapacity) throw new Error("power: Veuillez entrer un nombre");
+        else fuelCapacity = newFuelCapacity;
+    };
+
+    var setNbPlace = function(newNbPlace){
+        if(isNaN(newNbPlace) )throw new Error("fuel capacity: nombre attendu");
+        if(newNbPlace <= 0) throw new Error("fuel capacity: nombre négatif");
+        else if (!newNbPlace) throw new Error("power: Veuillez entrer un nombre");
+        else nbPlace = newNbPlace;
+    };
+
+    this.setInsured=function(newInsured){
+        if(newinsured==false ||newInsured==true ) insured = newInsured;
+        else throw new Error("insured:Entrez true or false")
+    };
+
+    this.setBoardMsg=function(newMsg){
+        if (!msg) throw new Error("board:ne laissez pas le champs vide");
+        else if(msg.length > 1) boardMsg = msg;
+        else throw new Error("bord:Au moins 2 caractères");
+    };
+
+    this.setFuelLevel=function(newFuelLevel){
+        if(isNaN(newFuelLevel) )throw new Error("fuel level: nombre attendu");
+        else if(newFuelLevel <= 0) throw new Error("fuel level: nombre négatif");
+        else if (!newFuelLevel) throw new Error("power: Veuillez entrer un nombre");
+        else fuelLevel = newFuelLevel;
+    };
+
+    // getters
+    this.getImmatriculation=function(){return immatriculation};
+    this.getColor=function(){return color}
+    this.getWeight=function(){return weight};
+    this.getPower=function(){return power};
+    this.getFuelCapacity=function(){return fuelCapacity};
+    this.getNbPlace=function(){return nbPlace};
+    this.getInsured=function(){return insured};
+    this.getBoardMsg=function(){return boardMsg};
+    this.getFuelLevel=function(){return fuelLevel};
+
+    // Initialisation
+    setImmatriculation(newImmatriculation);
+    setColor(newColor);
+    setWeight(newWeight);
+    setPower(newPower);
+    setFuelCapacity(newFuelCapacity);
+    setNbPlace(newNbPlace);
+    console.log(this.getBoardMsg());
+    // Action
+
+
+    //toString
+     
 //Methods
 function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuel, newNbPlace) {
     var immatriculation;
@@ -114,7 +212,6 @@ function Voiture(newImmatriculation, newColor, newWeight, newPower, newFuel, new
             "insured : " + insured + "\n" +
             "boardMsg : " + boardMsg + "\n";
 
-
-
     }
+}
 }

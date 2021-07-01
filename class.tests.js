@@ -1,3 +1,8 @@
+function testAppelClass(){
+    var voiture1 = new Voiture("3636", "red", 1500, 50, 100, 4);
+    console.log(voiture1.toString());
+}
+
 //TESTS
 
 //scenario nominal
@@ -57,3 +62,4 @@ for (let i = 0; i < jeuEssaiMove.length; i++) {
         console.error("input : " + jeuEssaiMove[i][0] + " + " + jeuEssaiMove[i][1] + " error : " + e);
     }
 }
+
