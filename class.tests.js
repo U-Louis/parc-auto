@@ -46,8 +46,10 @@ let jeuEssaiMove = [];
 for (let i = 0; i < jeuEssaiMove.length; i++) {
     for (let j = i; j < jeuEssaiMove.length; j++) {
         jeuEssaiMove.push([elements[i], elements[j]]);
+
     }
 }
+
 for (let i = 0; i < jeuEssaiMove.length; i++) {
     try {
         voiture1.move(jeuEssaiMove[i][0], jeuEssaiMove[i][1]);
