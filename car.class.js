@@ -10,7 +10,12 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
     var boardMsg = "Welcome aboard";
     
     const COLORS = [blue, green, red, yellow, purple, white, black, brown];
-    
+    const TYPEDEROUTE = {
+        "ville": 10,
+        "route": 5,
+        "autoroute": 8,
+        "circuit": 12
+    }
     
 
     //Getters and Setters
