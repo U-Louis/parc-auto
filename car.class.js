@@ -74,7 +74,7 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
 
     // getters
     this.getImmatriculation=function(){return immatriculation};
-    this.getColor=function(){return color}
+    this.getColor=function(){return color};
     this.getWeight=function(){return weight};
     this.getPower=function(){return power};
     this.getFuelCapacity=function(){return fuelCapacity};
