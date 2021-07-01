@@ -20,6 +20,12 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
         else throw new Error("immatricuation: Au moins 4 caractères");
     };
 
+    var setColor=function(newColor){
+        if (!newImmatriculation) throw new Error("color:champ obligatoire");
+        else if(newImmatriculation.length >= 0) color = newColor;
+        else throw new Error("color: Au moins 1 caractères");
+    }
+
     var setWeight=function(newWeight){
         if(isNaN(newWeight) )throw new Error("weight: nombre attendu");
         else if(newWeight <= 0) throw new Error("weight: nombre négatif");
@@ -37,13 +43,15 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
     var setFuelCapacity=function(newFuelCapacity){
         if(isNaN(newFuelCapacity) )throw new Error("fuel capacity: nombre attendu");
         if(newFuelCapacity <= 0) throw new Error("fuel capacity: nombre négatif");
-        if(!newFuelCapacity) fuelCapacity = newFuelCapacity;
+        else if (!newFuelCapacity) throw new Error("power: Veuillez entrer un nombre");
+        else fuelCapacity = newFuelCapacity;
     };
 
     var setNbPlace = function(newNbPlace){
         if(isNaN(newNbPlace) )throw new Error("fuel capacity: nombre attendu");
         if(newNbPlace <= 0) throw new Error("fuel capacity: nombre négatif");
-        if(!newNbPlace) nbPlace = newNbPlace;
+        else if (!newNbPlace) throw new Error("power: Veuillez entrer un nombre");
+        else nbPlace = newNbPlace;
     };
 
     this.setInsured=function(newInsured){
@@ -59,12 +67,14 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
 
     this.setFuelLevel=function(newFuelLevel){
         if(isNaN(newFuelLevel) )throw new Error("fuel level: nombre attendu");
-        if(newFuelLevel <= 0) throw new Error("fuel level: nombre négatif");
-        if(!newFuelLevel) fuelLevel = newFuelLevel;
+        else if(newFuelLevel <= 0) throw new Error("fuel level: nombre négatif");
+        else if (!newFuelLevel) throw new Error("power: Veuillez entrer un nombre");
+        else fuelLevel = newFuelLevel;
     };
 
     // getters
     this.getImmatriculation=function(){return immatriculation};
+    this.getColor=function(){return color}
     this.getWeight=function(){return weight};
     this.getPower=function(){return power};
     this.getFuelCapacity=function(){return fuelCapacity};
@@ -75,6 +85,7 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
 
     // Initialisation
     setImmatriculation(newImmatriculation);
+    setColor(newColor);
     setWeight(newWeight);
     setPower(newPower);
     setFuelCapacity(newFuelCapacity);
