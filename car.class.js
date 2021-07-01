@@ -5,7 +5,7 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuel,newNbPla
     var power;
     var fuelCapacity ;
     var nbPlace;
-    var insure;
+    var insured;
     var boardMsg;
 
     
@@ -27,7 +27,7 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuel,newNbPla
     this.getPower=function(){return power};
     this.getFuelCapacity=function(){return fuelCapacity};
     this.getNbPlace=function(){return nbPlace};
-    this.getInsure=function(){return insure};
+    this.getInsure=function(){return insured};
     this.getBoardMsg=function(){return boardMsg};
     // Initialisation
 
