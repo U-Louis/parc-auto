@@ -81,3 +81,4 @@ this.fillGas = function(anyGasQuantity) {
     gasQuantity = anyGasQuantity;
 
 }
+}
