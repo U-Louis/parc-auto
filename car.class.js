@@ -174,4 +174,4 @@ function Voiture(newImmatriculation,newColor,newWeight,newPower,newFuelCapacity,
 
     }
 }
-}
+
